@@ -1,0 +1,108 @@
+/* Toàn bộ body */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: url('../images/tet.jpg') no-repeat center center fixed;
+    /* Đường dẫn ảnh nền */
+    background-size: cover;
+    background-repeat: no-repeat;
+        /* Không lặp lại ảnh nền */
+    background-position: center;
+    /* Ảnh nền tự động bao phủ màn hình */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Khối container chính */
+.container {
+    margin-top: 10%;
+    background: rgba(255, 255, 255, 0.1);
+    /* Màu nền trong suốt nhẹ */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Hiệu ứng đổ bóng */
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    /* Màu vàng ánh kim */
+    text-shadow: 2px 2px 4px #d13d3d;
+    /* Hiệu ứng bóng chữ */
+}
+
+/* Khối đếm ngược */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Khối thời gian */
+.time {
+    font-size: 2em;
+    background: #e63946;
+    /* Màu đỏ đậm */
+    color: #fff;
+    /* Màu chữ trắng */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Hiệu ứng đổ bóng */
+    border: 2px solid #ffd700;
+    /* Viền vàng */
+}
+
+/* Chữ trong mỗi khối */
+.time span {
+    display: block;
+}
+
+.time span:first-child {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fce38a;
+    /* Màu vàng sáng */
+}
+
+/* Hiệu ứng hoa mai */
+#falling-flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.flower {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('../images/pngtree-yellow-apricot-petals-png-image_12277053.png');
+    /* URL hình hoa mai */
+    background-size: cover;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.5;
+    }
+}
